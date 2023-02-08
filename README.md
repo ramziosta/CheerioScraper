@@ -20,12 +20,14 @@ The app will scrape the data from the website, and save it to a file named "data
 
 1. Change the URL: Open the file `scraper.js` and modify the `axios.get` method to use the URL you want to scrape.
 
-    // change the url to the site you are trying to scrape
+ change the url to the site you are trying to scrape
+ 
   const response = await axios.get('https://github.com/');
 
 2. Change the CSS selector: Open the file `scraper.js` and modify the CSS selector in the `$('css-selector')` method to match the elements you want to extract.
 
-  // Extract the data using CSS selectors 
+ Extract the data using CSS selectors 
+
   // if looking for data from headlines use h1, looking for data from paragraphs, use p, looking for a list, use li, etc...
   $('p').each((index, element) => {
     const item = $(element).text();
